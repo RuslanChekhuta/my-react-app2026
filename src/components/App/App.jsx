@@ -1,5 +1,5 @@
 import "./App.css";
-import MyName from "./MyName/MyName";
+import MyName from "../MyName/MyName";
 
 function App() {
   return (
