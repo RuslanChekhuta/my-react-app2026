@@ -1,13 +1,15 @@
 import "./App.css";
 import MyName from "../MyName/MyName";
+import Intro from "../Intro/Intro";
+import MyCity from "../myCity/myCity";
 
 function App() {
   return (
     <>
       <div>
-        <h1>Привет, React!</h1>
-        <p>Это мой первый React-проект с Vite.</p>
+        <Intro />
         <MyName />
+        <MyCity />
       </div>
     </>
   );
