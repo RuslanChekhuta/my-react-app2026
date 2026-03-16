@@ -1,5 +1,6 @@
 import { MyName } from "../MyName/MyName";
 import { Email } from "../Email";
+import { ContactCard } from "../ContactCard";
 import "./App.css";
 
 function App() {
@@ -19,11 +20,12 @@ function App() {
       {condition && <MyName />}
 
       <Email />
+      <ContactCard />
       <br />
-      <input type="checkbox" checked={false} />
+      <input id="email" type="checkbox" checked={false} />
       <img src="" alt="" />
       <br />
-      <label htmlFor="email"></label>
+      <label htmlFor="email">Получать новости</label>
       <button disabled>Просто кнопка</button>
     </>
   );
