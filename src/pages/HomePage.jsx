@@ -3,6 +3,8 @@ import { UserList } from "../components/UserList";
 import TextComponent from "../components/TextComponent";
 import { TaskList } from "../components/TaskList";
 import "./HomePage.css";
+import LegacyMessage from "../components/LegacyMessage";
+import { IdeaList } from "../components/IdeaList";
 
 function HomePage() {
   return (
@@ -12,7 +14,9 @@ function HomePage() {
       <Button />
       <UserList />
       <TextComponent />
+      <LegacyMessage />
       <TaskList />
+      <IdeaList />
     </div>
   );
 }
