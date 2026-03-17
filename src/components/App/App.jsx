@@ -4,6 +4,7 @@ import HomePage from "../../pages/HomePage";
 import { ThemeToggle } from "../ThemeToggle";
 import { Footer } from "../Footer/Footer";
 import "./App.css";
+import LikeCounter from "../LikeCounter";
 
 function App() {
   const [clicks, setClicks] = useState(5);
@@ -14,6 +15,9 @@ function App() {
       <Header clicks={clicks} text={text} />
       <HomePage clicks={clicks} setClicks={setClicks} />
       <ThemeToggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <ThemeToggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <LikeCounter />
+      <LikeCounter />
       <Footer isDarkMode={isDarkMode} text={text} setText={setText} />
     </main>
   );

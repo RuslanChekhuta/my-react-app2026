@@ -1,6 +1,6 @@
 export function ThemeToggle({ isDarkMode, setIsDarkMode }) {
   const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
+    setIsDarkMode((prev) => !prev);
   };
 
   return (
