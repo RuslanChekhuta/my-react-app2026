@@ -1,7 +1,14 @@
 import { Button } from "../Button";
 import "./Header.css";
 
-function Header() {
+function Header({
+  registerLabel,
+  loginLabel,
+  registerBtnStyles,
+  loginBtnStyles,
+  onRegisterClick,
+  onLoginClick,
+}) {
   const style = {
     color: "blue",
     fontSize: "2rem",
@@ -14,12 +21,14 @@ function Header() {
     <header className="container" style={style}>
       <h1>Заголовок</h1>
       <Button
-        
-        btnStyles={{ height: 20, background: "red" }}
+        label={registerLabel}
+        btnStyles={registerBtnStyles}
+        onClick={onRegisterClick}
       />
       <Button
-        label="Авторизация"
-        btnStyles={{ height: 20, background: "green" }}
+        label={loginLabel}
+        btnStyles={loginBtnStyles}
+        onClick={onLoginClick}
       />
     </header>
   );
