@@ -4,6 +4,10 @@
 //import { TodoList } from "./TodoList";
 import { WelcomeMessage } from "./WelcomeMessage";
 import "./HomePage.css";
+import AccessMessage from "./AccessMessage";
+import OrderStatus from "./OrderStatus";
+import AlertBanner from "./AlertBanner";
+import GuestOnlyMessage from "./GuestOnlyMessage";
 
 function HomePage() {
   // const messages = ["Сообщение 1", "Сообщение 2"];
@@ -19,6 +23,8 @@ function HomePage() {
 
   const isLoggedIn = true;
 
+  const alerts = ["Предупреждение 1", "Предупреждение 2", "Предупреждение 3"];
+
   return (
     <>
       {/* <Greeting isLoggedIn={true} />
@@ -29,6 +35,14 @@ function HomePage() {
       <UserProfile user={null} /> */}
       {/* <TodoList todos={todos} /> */}
       <WelcomeMessage isLoggedIn={isLoggedIn} />
+      <AccessMessage hasAccess={true} />
+      <AccessMessage hasAccess={false} />
+      <OrderStatus isPaid={true} />
+      <OrderStatus isPaid={false} />
+      <AlertBanner alerts={alerts} />
+      <AlertBanner alerts={[]} />
+      <GuestOnlyMessage showMessage={true} />
+      <GuestOnlyMessage showMessage={false} />
     </>
   );
 }
