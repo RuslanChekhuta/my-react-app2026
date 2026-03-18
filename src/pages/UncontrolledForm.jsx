@@ -1,12 +1,12 @@
 import { useRef } from "react";
 
-function UncontrolledForm() {
+const UncontrolledForm = () => {
   const inputRef = useRef(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    alert("Имя было отправлено: " + inputRef.current.value);
+    const value = inputRef.current.value;
+    alert(`Имя было отправлено: ${value}`);
   };
 
   return (
@@ -17,6 +17,6 @@ function UncontrolledForm() {
       <button type="submit">Отправить</button>
     </form>
   );
-}
+};
 
 export default UncontrolledForm;

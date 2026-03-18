@@ -1,15 +1,17 @@
 import ControlledForm from "./ControlledForm";
-// import UncontrolledForm from "./UncontrolledForm";
-// import MixedForm from "./MixedForm";
 import "./HomePage.css";
+import MixedForm from "./MixedForm";
+import UncontrolledForm from "./UncontrolledForm";
 
 function HomePage() {
   return (
-    <>
+    <section className="home-page">
       <ControlledForm />
-      {/* <UncontrolledForm />
-      <MixedForm /> */}
-    </>
+
+      <UncontrolledForm />
+
+      <MixedForm />
+    </section>
   );
 }
 

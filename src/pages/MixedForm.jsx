@@ -1,7 +1,8 @@
-import { useState, useRef } from "react";
+import React, { useRef, useState } from "react";
 
-function MixedForm() {
+const MixedForm = () => {
   const [name, setName] = useState("");
+
   const emailRef = useRef(null);
 
   const handleNameChange = (event) => {
@@ -16,16 +17,14 @@ function MixedForm() {
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Name:
-        <input type="text" value={name} onChange={handleNameChange} />
+        Name: <input type="text" value={name} onChange={handleNameChange} />
       </label>
       <label>
-        Email:
-        <input type="email" ref={emailRef} />
+        Email: <input type="email" ref={emailRef} />
       </label>
       <button type="submit">Submit</button>
     </form>
   );
-}
+};
 
 export default MixedForm;

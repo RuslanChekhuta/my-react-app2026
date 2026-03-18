@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function ControlledForm() {
+const ControlledForm = () => {
   const [value, setValue] = useState("");
 
   const handleChange = (event) => {
@@ -9,8 +9,9 @@ function ControlledForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert("Имя было отправлено: " + value);
+    alert(`Имя было отправлено: ${value}`);
   };
+
   return (
     <form onSubmit={handleSubmit}>
       <label>
@@ -19,6 +20,6 @@ function ControlledForm() {
       <button type="submit">Отправить</button>
     </form>
   );
-}
+};
 
 export default ControlledForm;
