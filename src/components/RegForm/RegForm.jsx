@@ -1,19 +1,19 @@
 import { useState } from "react";
+import "./RegForm.css";
 import {
   validatePassword,
   checkPasswordMatch,
   checkRequiredFields,
 } from "./validators";
-import "./RegForm.css";
 
 function RegForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isPasswordValid, setIsPasswordValid] = useState(true);
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [passwordMatch, setPasswordMatch] = useState(true);
   const [selectedYear, setSelectedYear] = useState("");
+  const [isPasswordValid, setIsPasswordValid] = useState(true);
+  const [passwordMatch, setPasswordMatch] = useState(true);
   const [requiredFieldsError, setRequiredFieldsError] = useState(false);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
@@ -21,10 +21,9 @@ function RegForm() {
 
   const handleEmailChange = (e) => setEmail(e.target.value);
 
-  const handleYearChange = (e) => setSelectedYear(e.target.value);
-
   const handlePasswordChange = (e) => {
     const newPassword = e.target.value;
+
     setPassword(newPassword);
     setIsPasswordValid(validatePassword(newPassword));
     setPasswordMatch(checkPasswordMatch(newPassword, confirmPassword));
@@ -36,14 +35,15 @@ function RegForm() {
     setPasswordMatch(checkPasswordMatch(password, newConfirmPassword));
   };
 
+  const handleYearChange = (e) => setSelectedYear(e.target.value);
+
   const years = Array.from(
     { length: 40 },
-    (_, i) => new Date().getFullYear() - i
+    (_, i) => new Date().getFullYear() - i,
   );
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const allFieldsFilled = checkRequiredFields([
       name,
       email,
@@ -51,28 +51,20 @@ function RegForm() {
       confirmPassword,
       selectedYear,
     ]);
-
     const isFormValid = allFieldsFilled && isPasswordValid && passwordMatch;
 
     if (!isFormValid) {
       setRequiredFieldsError(true);
       setShowSuccessMessage(false);
       return;
+    } else {
+      setRequiredFieldsError(false);
+      setShowSuccessMessage(true);
     }
 
-    setRequiredFieldsError(false);
-    setShowSuccessMessage(true);
-
-    const formData = {
-      name,
-      email,
-      password,
-      confirmPassword,
-      selectedYear,
-    };
+    const formData = { name, email, password, confirmPassword, selectedYear };
 
     alert(JSON.stringify(formData, null, 2));
-
     setTimeout(() => {
       setShowSuccessMessage(false);
     }, 3000);
@@ -105,7 +97,6 @@ function RegForm() {
             менее 8 символов
           </div>
         )}
-
         <input
           type="password"
           placeholder="Подтвердите пароль"
@@ -116,7 +107,6 @@ function RegForm() {
         {!passwordMatch && (
           <div className="error-message">Пароли пока не совпадают</div>
         )}
-
         <select value={selectedYear} onChange={handleYearChange}>
           <option value="">Дата окончания учебного заведения:</option>
           {years.map((year) => (
@@ -125,7 +115,6 @@ function RegForm() {
             </option>
           ))}
         </select>
-
         <button type="submit">Отправить</button>
         <button type="reset" onClick={handleReset}>
           Очистить форму
