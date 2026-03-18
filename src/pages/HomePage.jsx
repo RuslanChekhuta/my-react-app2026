@@ -3,6 +3,10 @@
 // import { Comments } from "./Comments";
 import { Products } from "./Products";
 import "./HomePage.css";
+import CityList from "./CityList";
+import BookList from "./BookList";
+import LessonTasks from "./LessonTasks";
+import ServiceList from "./ServiceList";
 
 function HomePage() {
   return (
@@ -11,6 +15,10 @@ function HomePage() {
       {/* <Tasks /> */}
       {/* <Comments /> */}
       <Products />
+      <CityList />
+      <BookList />
+      <LessonTasks />
+      <ServiceList />
     </>
   );
 }
