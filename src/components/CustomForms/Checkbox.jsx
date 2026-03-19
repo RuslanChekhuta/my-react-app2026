@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 
 export const Checkbox = forwardRef(({ label, onChange, onBlur, name }, ref) => (
-  <div>
+  <>
     <label>
       <input
         type="checkbox"
@@ -12,8 +12,7 @@ export const Checkbox = forwardRef(({ label, onChange, onBlur, name }, ref) => (
       />
       {label}
     </label>
-  </div>
+  </>
 ));
 
-// Задаем displayName для компонента
 Checkbox.displayName = "Checkbox";

@@ -7,5 +7,4 @@ export const Input = forwardRef(({ label, onChange, onBlur, name }, ref) => (
   </div>
 ));
 
-// Задаем displayName для компонента
 Input.displayName = "Input";
