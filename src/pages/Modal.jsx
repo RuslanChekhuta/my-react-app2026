@@ -4,7 +4,7 @@ export const Modal = ({ children, onClose }) => {
   return (
     <div className="overlay">
       <div className="modal">
-        <button onClick={onClose} className="close-button">
+        <button className="close-button" onClick={onClose}>
           &times;
         </button>
         {children}

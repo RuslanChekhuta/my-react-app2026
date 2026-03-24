@@ -1,16 +1,16 @@
 // import Container from "./Container";
-import { ModalPage } from "./ModalPage";
 import "./HomePage.css";
+import { ModalPage } from "./ModalPage";
 
 function HomePage() {
   return (
     <>
       {/* <Container>
         <h2>Это дочерний компонент1</h2>
-      </Container>
+      </Container>{" "}
       <Container>
         <h2>Это дочерний компонент2</h2>
-      </Container>
+      </Container>{" "}
       <Container>
         <h2>Это дочерний компонент3</h2>
       </Container> */}
