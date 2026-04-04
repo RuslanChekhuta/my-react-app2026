@@ -1,4 +1,4 @@
-import * as S from "../components/Button/Button.styled";
+import * as S from "../components/Button/Button.styled.js";
 
 const HomePage = () => {
   return (
@@ -7,7 +7,6 @@ const HomePage = () => {
       <S.Input type="search" placeholder="Найти" />
       <S.Input type="password" placeholder="Пароль" />
       <DangerButton>Опасная кнопка</DangerButton> */}
-
       {/* <S.Title>Заголовок</S.Title>
       <S.Subtitle>Подзаголовок</S.Subtitle> */}
       <S.AnimatedComponent>Анимация</S.AnimatedComponent>

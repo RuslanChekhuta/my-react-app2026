@@ -2,9 +2,9 @@ import { useState } from "react";
 import Header from "../Header/Header";
 import HomePage from "../../pages/HomePage";
 import { Footer } from "../Footer/Footer";
-import "./App.css";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "../../global.styled";
+import "./App.css";
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -12,17 +12,9 @@ function App() {
     return savedTheme ? savedTheme : "light";
   });
 
-  const lightTheme = {
-    body: "#FFF",
-    text: "#363537",
-    // Другие стили светлой темы
-  };
+  const lightTheme = { body: "#FFF", text: "#363537" };
 
-  const darkTheme = {
-    body: "#363537",
-    text: "#FAFAFA",
-    // Другие стили темной темы
-  };
+  const darkTheme = { body: "#363537", text: "#FAFAFA" };
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
@@ -33,7 +25,7 @@ function App() {
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyle />
-      <main className="app">
+      <main className="app" data-theme={theme}>
         <Header />
         <button onClick={toggleTheme}>Сменить тему</button>
         <HomePage />

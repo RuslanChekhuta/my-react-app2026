@@ -1,17 +1,15 @@
-import styled, { keyframes } from "styled-components";
+import { keyframes, styled } from "styled-components";
 
 const fadeInScaleRotate = keyframes`
-  from {
-    opacity: 0;
-    transform: scale(0.5) rotate(-90deg);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-  }
+    from{
+        opacity: 0;
+        transform: scale(0.5) rotate(-90deg)
+    } to{
+        opacity: 1;
+        transform: scale(1) rotate(0deg)
+    }
 `;
 
-// Стилизованный компонент с анимацией
 export const AnimatedComponent = styled.div`
   animation: ${fadeInScaleRotate} 2s ease-in-out;
   width: 200px;
@@ -33,13 +31,11 @@ export const ResponsiveComponent = styled.div`
   background-color: lightblue;
   padding: 20px;
   width: 900px;
-
   @media (max-width: 768px) {
     background-color: lightgreen;
     padding: 10px;
     width: 600px;
   }
-
   @media (max-width: 375px) {
     background-color: red;
     padding: 10px;
@@ -48,21 +44,19 @@ export const ResponsiveComponent = styled.div`
 `;
 
 export const ButtonByTheme = styled.button`
-  background-color: ${props => props.theme.body};
-  color: ${props => props.theme.text};
-  border: 2px solid ${props => props.theme.text};
+  background-color: ${(props) => props.theme.body};
+  color: ${(props) => props.theme.text};
+  border: 2px solid ${(props) => props.theme.text};
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1em;
   transition: all 0.25s linear;
-
   &:hover {
-    background-color: ${props => props.theme.text};
-    color: ${props => props.theme.body};
+    background-color: ${(props) => props.theme.text};
+    color: ${(props) => props.theme.body};
   }
 `;
-
 
 // const titleMixin = css`
 //   font-size: 32px;
