@@ -1,4 +1,4 @@
-function App() {
+const App = () => {
   return (
     <div className="container bg-gray-900 mx-auto my-10 py-10">
       <h1 className="text-4xl font-bold text-blue-900 text-center mt-22.5">
@@ -15,7 +15,7 @@ function App() {
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9LMEZ98BFIeJ67iVA4E4uSuL22xygYJ2kaQ&s"
             alt="Рисунок 1"
-            className="rounded-full mb-2 w-40 max-h-24 transition-transform duration-300  transform hover:scale-105"
+            className="rounded-full mb-2 w-40 max-h-24 transition-transform duration-300 transform hover:scale-105"
           />
           <h2 className="text-xl font-semibold">Заголовок 1</h2>
           <p className="text-gray-600"></p>
@@ -24,7 +24,7 @@ function App() {
           <img
             src="https://na-zapade-mos.ru/files/data/user/AiF/olga.k/files/2020/2020.07.30-1596116320.3183_nature-3474826-1920-1.jpg"
             alt="Рисунок 2"
-            className="rounded-full mb-2 w-40 max-h-24 transition-transform duration-300  transform hover:scale-105"
+            className="rounded-full mb-2 w-40 max-h-24 transition-transform duration-300 transform hover:scale-105"
           />
           <h2 className="text-xl font-semibold">Заголовок 1</h2>
           <p className="text-gray-600"></p>
@@ -33,7 +33,7 @@ function App() {
           <img
             src="https://oclo.ru/wp-content/uploads/2023/10/priroda-rossii-6.webp"
             alt="Рисунок 3"
-            className="rounded-full mb-2 w-40 max-h-24 transition-transform duration-300  transform hover:scale-105"
+            className="rounded-full mb-2 w-40 max-h-24 transition-transform duration-300 transform hover:scale-105"
           />
           <h2 className="text-xl font-semibold">Заголовок 1</h2>
           <p className="text-gray-600"></p>
@@ -44,49 +44,49 @@ function App() {
           <img
             src="https://kudann.ru/uploads/b6b4164a5bd6bb8d7b91a5f24fd42d6b.jpeg"
             alt="Рисунок"
-            className="w-full h-48 object-cover transition-transform duration-300  transform hover:scale-105"
+            className="w-full h-48 object-cover transition-transform duration-300 transform hover:scale-105"
           />
         </div>
         <div className="bg-gray-200 rounded-lg overflow-hidden">
           <img
             src="https://kudann.ru/uploads/b6b4164a5bd6bb8d7b91a5f24fd42d6b.jpeg"
             alt="Рисунок"
-            className="w-full h-48 object-cover transition-transform duration-300  transform hover:scale-105"
+            className="w-full h-48 object-cover transition-transform duration-300 transform hover:scale-105"
           />
         </div>
         <div className="bg-gray-200 rounded-lg overflow-hidden">
           <img
             src="https://kudann.ru/uploads/b6b4164a5bd6bb8d7b91a5f24fd42d6b.jpeg"
             alt="Рисунок"
-            className="w-full h-48 object-cover transition-transform duration-300  transform hover:scale-105"
+            className="w-full h-48 object-cover transition-transform duration-300 transform hover:scale-105"
           />
         </div>
         <div className="bg-gray-200 rounded-lg overflow-hidden">
           <img
             src="https://kudann.ru/uploads/b6b4164a5bd6bb8d7b91a5f24fd42d6b.jpeg"
             alt="Рисунок"
-            className="w-full h-48 object-cover transition-transform duration-300  transform hover:scale-105"
+            className="w-full h-48 object-cover transition-transform duration-300 transform hover:scale-105"
           />
         </div>
         <div className="bg-gray-200 rounded-lg overflow-hidden">
           <img
             src="https://kudann.ru/uploads/b6b4164a5bd6bb8d7b91a5f24fd42d6b.jpeg"
             alt="Рисунок"
-            className="w-full h-48 object-cover transition-transform duration-300  transform hover:scale-105"
+            className="w-full h-48 object-cover transition-transform duration-300 transform hover:scale-105"
           />
         </div>
         <div className="bg-gray-200 rounded-lg overflow-hidden">
           <img
             src="https://kudann.ru/uploads/b6b4164a5bd6bb8d7b91a5f24fd42d6b.jpeg"
             alt="Рисунок"
-            className="w-full h-48 object-cover transition-transform duration-300  transform hover:scale-105"
+            className="w-full h-48 object-cover transition-transform duration-300 transform hover:scale-105"
           />
         </div>
         <div className="bg-gray-200 rounded-lg overflow-hidden">
           <img
             src="https://kudann.ru/uploads/b6b4164a5bd6bb8d7b91a5f24fd42d6b.jpeg"
             alt="Рисунок"
-            className="w-full h-48 object-cover transition-transform duration-300  transform hover:scale-105"
+            className="w-full h-48 object-cover transition-transform duration-300 transform hover:scale-105"
           />
         </div>
       </div>
@@ -115,6 +115,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
