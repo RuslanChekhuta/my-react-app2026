@@ -9,13 +9,6 @@
   background-color: #008822;
 }
 
-.bottom-block {
-  background-color: yellow;
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-}
-
 .primary {
   background-color: blue;
   color: white;
@@ -24,4 +17,11 @@
 .secondary {
   background-color: gray;
   color: black;
+}
+
+.bottom-block {
+  background-color: yellow;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
 }

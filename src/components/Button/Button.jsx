@@ -1,8 +1,9 @@
 import styles from "./Button.module.css";
 import stylesAdded from "./AddedStyles.module.css";
 
-function Button({ variant = "primary" }) {
-  const buttonClass = `${styles.button} ${styles[variant]}`;
+const Button = ({ variant = "primary" }) => {
+  const buttonClass = `${styles[variant]} ${styles.button}`;
+
   return (
     <>
       <button className={buttonClass}>Кнопка</button>
@@ -12,6 +13,6 @@ function Button({ variant = "primary" }) {
       <div className={styles["bottom-block"]}>Блок</div>
     </>
   );
-}
+};
 
 export default Button;
