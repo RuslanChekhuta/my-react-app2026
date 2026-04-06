@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { Button } from "../Button.jsx/Button";
+import { Button } from "../Button/Button";
 
 function App() {
   const [theme, setTheme] = useState("light");
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
+
   return (
     <div data-theme={theme} className="dark:bg-green-950">
       <h2 className="text-[1rem] dark:text-white ddd:text-amber-700">
@@ -23,7 +24,7 @@ function App() {
         <iframe
           src="https://player.vimeo.com/video/76979871"
           className="mx-auto w-[300px] aspect-video transform-3d rotate-x-60 rotate-z-35"
-        />
+        ></iframe>
       </div>
     </div>
   );

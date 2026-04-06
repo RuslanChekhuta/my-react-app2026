@@ -1,3 +1,3 @@
-export function Button() {
+export const Button = () => {
   return <button className="dark:bg-white">Кнопка чувствует тему</button>;
-}
+};
