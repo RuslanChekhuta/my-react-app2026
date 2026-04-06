@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { ClickComponent } from "./ClickComponents";
+import { ClickComponents } from "./ClickComponents";
 
-export function Counter() {
+export const Counter = () => {
   const [count, setCount] = useState(0);
   const [countEffect, setCountEffect] = useState(0);
   const [number, setNumber] = useState(0);
@@ -15,7 +15,7 @@ export function Counter() {
       <p>Счетчик: {count}</p>
       <button onClick={() => setCount(count + 12)}>Увеличить</button>
       <p>Эффект счетчика с useEffect: {countEffect}</p>
-      <ClickComponent number={number} setNumber={setNumber} count={count}/>
+      <ClickComponents number={number} setNumber={setNumber} count={count} />
     </>
   );
-}
+};

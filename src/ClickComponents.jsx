@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 
-export function ClickComponent({ number, setNumber, count }) {
+export const ClickComponents = ({ number, setNumber, count }) => {
   useEffect(() => {
     setNumber(number + 100);
   }, [count]);
-  
+
   return (
     <>
       <button onClick={() => setNumber(number + 1)}>
@@ -12,4 +12,4 @@ export function ClickComponent({ number, setNumber, count }) {
       </button>
     </>
   );
-}
+};

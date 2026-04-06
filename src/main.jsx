@@ -7,5 +7,5 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/* <DataFetcher /> */}
     <Counter />
-  </StrictMode>
+  </StrictMode>,
 );

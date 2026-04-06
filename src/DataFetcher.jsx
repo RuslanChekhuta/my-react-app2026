@@ -1,29 +1,28 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-export function DataFetcher() {
+export const DataFetcher = () => {
   const [data, setData] = useState([]);
   const [count, setCount] = useState(0);
-  const [loading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://jsonplaceholder.typicode.com/posts?_limit=5"
+          "https://jsonplaceholder.typicode.com/posts?_limit=5",
         );
-        const result = await response.json();
-        setData(result);
+        const res = await response.json();
+        setData(res);
       } catch (error) {
         console.error(error.message);
       } finally {
         setIsLoading(false);
       }
     };
-
     fetchData();
   }, []);
 
-  if (loading) {
+  if (isLoading === true) {
     return <div>Загрузка...</div>;
   }
 
@@ -35,7 +34,7 @@ export function DataFetcher() {
         ))}
       </ul>
       <p>{count}</p>
-      <button onClick={() => setCount(count + 1)}>Увеличить</button>
+      <button onClick={() => setCount((prev) => prev + 1)}>Увеличить</button>
     </>
   );
-}
+};
