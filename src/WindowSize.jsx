@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 const WindowSize = () => {
   const [windowSize, setWindowSize] = useState({
@@ -17,8 +17,7 @@ const WindowSize = () => {
     window.addEventListener("resize", handleResize);
 
     // Функция очистки
-
-  }, []); // Пустой массив зависимостей, чтобы подписаться только один раз
+  }, []);
 
   return (
     <div>

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
-export default function Cleanup() {
+const Cleanup = () => {
   const [message, setMessage] = useState("Hello, World!");
-  
+
   useEffect(() => {
     console.log(message);
   }, [message]);
@@ -12,9 +12,7 @@ export default function Cleanup() {
       console.log(message);
     }, 2000);
 
-    return () => {
-      clearInterval(id);
-    };
+    return () => clearInterval(id);
   }, [message]);
 
   return (
@@ -28,4 +26,6 @@ export default function Cleanup() {
       <div>В консоль выводится {message}</div>
     </div>
   );
-}
+};
+
+export default Cleanup;

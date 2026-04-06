@@ -1,6 +1,7 @@
 import { useState } from "react";
 import LifecycleDemo from "./LifecycleDemo";
-function App() {
+
+const App = () => {
   const [showComponent, setShowComponent] = useState(true);
 
   return (
@@ -11,6 +12,6 @@ function App() {
       {showComponent && <LifecycleDemo />}
     </div>
   );
-}
+};
 
 export default App;

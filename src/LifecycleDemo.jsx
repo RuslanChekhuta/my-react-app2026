@@ -1,14 +1,13 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-function LifecycleDemo() {
+const LifecycleDemo = () => {
   const [count, setCount] = useState(0);
 
-  // Эффект с таймером
   useEffect(() => {
     console.log("Компонент смонтирован или обновлен");
 
     const intervalId = setInterval(() => {
-      setCount((prevCount) => prevCount + 10); // Увеличиваем счетчик каждую секунду
+      setCount((prev) => prev + 10);
     }, 1000);
 
     return () => {
@@ -21,6 +20,6 @@ function LifecycleDemo() {
       <p>Счетчик: {count}</p>
     </div>
   );
-}
+};
 
 export default LifecycleDemo;
