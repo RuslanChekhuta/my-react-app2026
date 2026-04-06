@@ -1,15 +1,13 @@
 import { useState } from "react";
 
-export const TodoItem = ({ todo, onDelete }) => {
+const TodoItem = ({ todo, onDelete }) => {
   const [isCompleted, setIsCompleted] = useState(false);
+
   return (
-    <div
-      className="group flex items-center 
-    justify-between p-4 gap-3 bg-white dark:bg-page-dark rounded-lg h-12 shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100"
-    >
+    <div className="group flex items-center justify-between p-4 gap-3 bg-white dark:bg-page-dark rounded-lg h-12 shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
       <div className="flex items-center gap-3">
         <button
-          onClick={() => setIsCompleted(!isCompleted)}
+          onClick={() => setIsCompleted((prev) => !prev)}
           className={`p-1 rounded-full border-2 ${
             isCompleted
               ? "border-green-500 bg-green-500"
@@ -65,3 +63,5 @@ export const TodoItem = ({ todo, onDelete }) => {
     </div>
   );
 };
+
+export default TodoItem;

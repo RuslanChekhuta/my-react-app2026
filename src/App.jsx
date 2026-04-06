@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { TodoItem } from "./components/TodoItem";
-import { AddTodo } from "./components/AddTodo";
+import TodoItem from "./components/TodoItem";
+import AddTodo from "./components/AddTodo";
 
 function App() {
   const initialTodos = [
@@ -8,13 +8,11 @@ function App() {
     { id: 2, text: "Сделать TODO app" },
     { id: 3, text: "Сделать деплой" },
   ];
-  const [todos, setTodos] = useState(initialTodos);
-  const [theme, setTheme] = useState(getInitialTheme());
 
-  function getInitialTheme() {
+  const getInitialTheme = () => {
     const savedTheme = localStorage.getItem("theme");
     const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
+      "(prefers-color-scheme: dark)",
     ).matches;
 
     if (savedTheme) {
@@ -25,7 +23,20 @@ function App() {
       const hours = new Date().getHours();
       return hours < 6 || hours >= 21 ? "dark" : "light";
     }
-  }
+  };
+
+  const [todos, setTodos] = useState(initialTodos);
+
+  const [theme, setTheme] = useState(getInitialTheme());
+
+  const onDelete = (id) => {
+    setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
+  };
+
+  const onAdd = (text) => {
+    const newTodo = { id: Date.now(), text };
+    setTodos([...todos, newTodo]);
+  };
 
   const toggleTheme = () => {
     setTheme((prevTheme) => {
@@ -34,19 +45,6 @@ function App() {
       return newTheme;
     });
   };
-
-  const onAdd = (text) => {
-    const newTodo = {
-      id: Date.now(),
-      text,
-    };
-    setTodos([...todos, newTodo]);
-  };
-
-  const onDelete = (id) => {
-    setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
-  };
-
   return (
     <div
       data-theme={theme}

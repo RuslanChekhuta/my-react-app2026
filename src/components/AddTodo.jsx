@@ -1,14 +1,12 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-export function AddTodo({ onAdd }) {
+const AddTodo = ({ onAdd }) => {
   const [text, setText] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (text.trim()) {
-      onAdd(text);
-      setText("");
-    }
+    if (text.trim()) onAdd(text);
+    setText("");
   };
 
   return (
@@ -43,4 +41,6 @@ export function AddTodo({ onAdd }) {
       </div>
     </form>
   );
-}
+};
+
+export default AddTodo;
